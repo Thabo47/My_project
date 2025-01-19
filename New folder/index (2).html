@@ -1,0 +1,247 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Spotify Clone
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+        }
+  </style>
+ </head>
+ <body class="bg-gray-900 text-white">
+  <!-- Navbar -->
+  <nav class="bg-gray-800 p-4">
+   <div class="container mx-auto flex justify-between items-center">
+    <div class="flex items-center space-x-4">
+     <img alt="Spotify logo, a green circle with three curved lines inside representing sound waves" class="w-10 h-10" height="50" src="https://storage.googleapis.com/a1aa/image/eQj40u09qn3jR6YwkvRwRdhDaJDI1EBpvV5BYgGT3MmwZODKA.jpg" width="50"/>
+     <a class="text-xl font-bold" href="#">
+      Spotify
+     </a>
+    </div>
+    <div class="hidden md:flex space-x-4">
+     <a class="hover:text-green-500" href="#">
+      Premium
+     </a>
+     <a class="hover:text-green-500" href="#">
+      Support
+     </a>
+     <a class="hover:text-green-500" href="#">
+      Download
+     </a>
+     <a class="hover:text-green-500" href="#">
+      Sign Up
+     </a>
+     <a class="hover:text-green-500" href="#">
+      Log In
+     </a>
+    </div>
+    <div class="md:hidden">
+     <button class="text-white focus:outline-none" id="menu-btn">
+      <i class="fas fa-bars">
+      </i>
+     </button>
+    </div>
+   </div>
+  </nav>
+  <!-- Mobile Menu -->
+  <div class="hidden md:hidden bg-gray-800 p-4" id="mobile-menu">
+   <a class="block py-2 hover:text-green-500" href="#">
+    Premium
+   </a>
+   <a class="block py-2 hover:text-green-500" href="#">
+    Support
+   </a>
+   <a class="block py-2 hover:text-green-500" href="#">
+    Download
+   </a>
+   <a class="block py-2 hover:text-green-500" href="#">
+    Sign Up
+   </a>
+   <a class="block py-2 hover:text-green-500" href="#">
+    Log In
+   </a>
+  </div>
+  <!-- Hero Section -->
+  <section class="bg-gray-800 py-20">
+   <div class="container mx-auto text-center">
+    <h1 class="text-4xl md:text-6xl font-bold mb-6">
+     Music for everyone.
+    </h1>
+    <p class="text-lg md:text-2xl mb-8">
+     Millions of songs. No credit card needed.
+    </p>
+    <button class="bg-green-500 text-white py-2 px-6 rounded-full text-lg">
+     Get Spotify Free
+    </button>
+   </div>
+  </section>
+  <!-- Featured Playlists -->
+  <section class="py-20">
+   <div class="container mx-auto">
+    <h2 class="text-3xl font-bold mb-8">
+     Featured Playlists
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
+     <div class="bg-gray-800 p-4 rounded-lg">
+      <img alt="Playlist cover image with abstract colorful design" class="w-full h-64 object-cover rounded-lg mb-4" height="300" src="https://storage.googleapis.com/a1aa/image/5LQgWggUL6JHItXDo8lxrPBydRTcUP0LtCxaniTYBGd5MnBF.jpg" width="300"/>
+      <h3 class="text-xl font-bold">
+       Top Hits
+      </h3>
+      <p class="text-gray-400">
+       The hottest tracks right now.
+      </p>
+     </div>
+     <div class="bg-gray-800 p-4 rounded-lg">
+      <img alt="Playlist cover image with a sunset over a beach" class="w-full h-64 object-cover rounded-lg mb-4" height="300" src="https://storage.googleapis.com/a1aa/image/aHtc30kzfER5f01GDtBbw2d7qWCEKKIgSak3M7nSdiDjzcGUA.jpg" width="300"/>
+      <h3 class="text-xl font-bold">
+       Chill Vibes
+      </h3>
+      <p class="text-gray-400">
+       Relax and unwind with these tunes.
+      </p>
+     </div>
+     <div class="bg-gray-800 p-4 rounded-lg">
+      <img alt="Playlist cover image with a person running on a trail" class="w-full h-64 object-cover rounded-lg mb-4" height="300" src="https://storage.googleapis.com/a1aa/image/FUzZEmuwewSRaq45DwsW4RRYM2gm9jiPiXGBKvfa0W4ozcGUA.jpg" width="300"/>
+      <h3 class="text-xl font-bold">
+       Workout
+      </h3>
+      <p class="text-gray-400">
+       Get pumped with these high-energy tracks.
+      </p>
+     </div>
+     <div class="bg-gray-800 p-4 rounded-lg">
+      <img alt="Playlist cover image with a coffee cup and a book" class="w-full h-64 object-cover rounded-lg mb-4" height="300" src="https://storage.googleapis.com/a1aa/image/1CMhmYkQnBZLEtMSOjxrj9I6RJkuVTPxRxRDgDnJyFl5MnBF.jpg" width="300"/>
+      <h3 class="text-xl font-bold">
+       Morning Coffee
+      </h3>
+      <p class="text-gray-400">
+       Start your day with these mellow tunes.
+      </p>
+     </div>
+     <div class="bg-gray-800 p-4 rounded-lg">
+      <img alt="Playlist cover image with a neon cityscape" class="w-full h-64 object-cover rounded-lg mb-4" height="300" src="https://storage.googleapis.com/a1aa/image/LfzcKkqeReOfwTnN3FthYf5d1uAtjfFUmHOBFkbvHN1l4MnBF.jpg" width="300"/>
+      <h3 class="text-xl font-bold">
+       Night Drive
+      </h3>
+      <p class="text-gray-400">
+       Perfect tracks for a late-night drive.
+      </p>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-gray-800 py-10">
+   <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+    <div>
+     <h3 class="text-xl font-bold mb-4">
+      Company
+     </h3>
+     <ul>
+      <li>
+       <a class="hover:text-green-500" href="#">
+        About
+       </a>
+      </li>
+      <li>
+       <a class="hover:text-green-500" href="#">
+        Jobs
+       </a>
+      </li>
+      <li>
+       <a class="hover:text-green-500" href="#">
+        For the Record
+       </a>
+      </li>
+     </ul>
+    </div>
+    <div>
+     <h3 class="text-xl font-bold mb-4">
+      Communities
+     </h3>
+     <ul>
+      <li>
+       <a class="hover:text-green-500" href="#">
+        For Artists
+       </a>
+      </li>
+      <li>
+       <a class="hover:text-green-500" href="#">
+        Developers
+       </a>
+      </li>
+      <li>
+       <a class="hover:text-green-500" href="#">
+        Advertising
+       </a>
+      </li>
+      <li>
+       <a class="hover:text-green-500" href="#">
+        Investors
+       </a>
+      </li>
+      <li>
+       <a class="hover:text-green-500" href="#">
+        Vendors
+       </a>
+      </li>
+     </ul>
+    </div>
+    <div>
+     <h3 class="text-xl font-bold mb-4">
+      Useful Links
+     </h3>
+     <ul>
+      <li>
+       <a class="hover:text-green-500" href="#">
+        Support
+       </a>
+      </li>
+      <li>
+       <a class="hover:text-green-500" href="#">
+        Web Player
+       </a>
+      </li>
+      <li>
+       <a class="hover:text-green-500" href="#">
+        Free Mobile App
+       </a>
+      </li>
+     </ul>
+    </div>
+    <div>
+     <h3 class="text-xl font-bold mb-4">
+      Follow Us
+     </h3>
+     <div class="flex space-x-4">
+      <a class="hover:text-green-500" href="#">
+       <i class="fab fa-facebook fa-2x">
+       </i>
+      </a>
+      <a class="hover:text-green-500" href="#">
+       <i class="fab fa-twitter fa-2x">
+       </i>
+      </a>
+      <a class="hover:text-green-500" href="#">
+       <i class="fab fa-instagram fa-2x">
+       </i>
+      </a>
+     </div>
+    </div>
+   </div>
+  </footer>
+  <script>
+   document.getElementById('menu-btn').addEventListener('click', function() {
+            var menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+  </script>
+ </body>
+</html>
